@@ -1,4 +1,5 @@
 using AlunoApi.Context;
+using AlunoApi.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
@@ -20,6 +21,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
 });
+
+builder.Services.AddScoped<IAlunoService, AlunosService>();
 
 var app = builder.Build();
 
