@@ -24,6 +24,15 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddScoped<IAlunoService, AlunosService>();
 
+builder.Services.AddCors(o => o.AddPolicy("MyPolicy",
+                    builder =>
+                    {
+                        builder.AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader()
+                        .AllowCredentials();
+                    }));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

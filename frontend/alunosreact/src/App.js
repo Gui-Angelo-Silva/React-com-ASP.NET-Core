@@ -3,12 +3,12 @@ import './App.css';
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import axios from 'axios';
-import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
+import { Modal, ModalBody, ModalFooter, ModalHeader, Button, Table } from 'reactstrap';
 import logoCadastro from './assets/logocadastro.png'
 
 function App() {
 
-  const baseUrl = 'https://localhost:7290/api/alunos';
+  const baseUrl = 'https://localhost:7290/api/Alunos';
   
   const [data, setData] = useState([]);
 
@@ -16,6 +16,7 @@ function App() {
     await axios.get(baseUrl)
       .then(response => {
         setData(response.data);
+        console.log(data)
       }).catch(error => {
         console.log(error);
       })
@@ -31,9 +32,9 @@ function App() {
       <h3>Cadastro de Alunos</h3>
       <header className="App-header">
         {/* <img src={logoCadastro} alt='Cadastro' /> */}
-        <button className='btn btn-sucess'>Adicionar</button>
+        <Button className='btn btn-sucess'>Adicionar</Button>
       </header>
-      <table className='table table-bordered'>
+      <Table className='table table-bordered'>
         <thead>
           <th>Id</th>
           <th>Nome</th>
@@ -49,13 +50,13 @@ function App() {
               <td>{aluno.email}</td>
               <td>{aluno.idade}</td>
               <td>
-                <button className='btn btn-primary'>Editar</button> {"  "}
-                <button className='btn btn-danger'>Excluir</button>
+                <Button className='btn btn-primary'>Editar</Button> {"  "}
+                <Button className='btn btn-danger'>Excluir</Button>
               </td>
             </tr>
           ))}
         </tbody>
-      </table>
+      </Table>
     </div>
   );
 }
