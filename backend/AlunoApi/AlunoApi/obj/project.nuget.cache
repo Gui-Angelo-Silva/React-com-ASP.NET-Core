@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tbpAN17jzGwUcLxqLtBoIhEaBzxrEgFWiSPnJgjXLpCvo7YST6lcKaB7i9e0xvVExZOSjSGJtQRWsbDGLkRY3w==",
+  "dgSpecHash": "tYJ0NstCzLgBNq9E+C7CYLDuWr2TlH7Ul7CvEXPwjrUwBA2hzhm98BwhRzplhNvqcvmyYzU+JR/fXiQLB/neFQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Aluno\\Documents\\React-com-ASP.NET-Core\\AlunoApi\\AlunoApi\\AlunoApi.csproj",
+  "projectFilePath": "C:\\Users\\Aluno\\Documents\\React-com-ASP.NET-Core\\backend\\AlunoApi\\AlunoApi\\AlunoApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Aluno\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Aluno\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

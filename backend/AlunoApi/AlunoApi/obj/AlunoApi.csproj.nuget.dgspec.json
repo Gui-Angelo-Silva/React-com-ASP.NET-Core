@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Aluno\\Documents\\React-com-ASP.NET-Core\\AlunoApi\\AlunoApi\\AlunoApi.csproj": {}
+    "C:\\Users\\Aluno\\Documents\\React-com-ASP.NET-Core\\backend\\AlunoApi\\AlunoApi\\AlunoApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Aluno\\Documents\\React-com-ASP.NET-Core\\AlunoApi\\AlunoApi\\AlunoApi.csproj": {
+    "C:\\Users\\Aluno\\Documents\\React-com-ASP.NET-Core\\backend\\AlunoApi\\AlunoApi\\AlunoApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Aluno\\Documents\\React-com-ASP.NET-Core\\AlunoApi\\AlunoApi\\AlunoApi.csproj",
+        "projectUniqueName": "C:\\Users\\Aluno\\Documents\\React-com-ASP.NET-Core\\backend\\AlunoApi\\AlunoApi\\AlunoApi.csproj",
         "projectName": "AlunoApi",
-        "projectPath": "C:\\Users\\Aluno\\Documents\\React-com-ASP.NET-Core\\AlunoApi\\AlunoApi\\AlunoApi.csproj",
+        "projectPath": "C:\\Users\\Aluno\\Documents\\React-com-ASP.NET-Core\\backend\\AlunoApi\\AlunoApi\\AlunoApi.csproj",
         "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Aluno\\Documents\\React-com-ASP.NET-Core\\AlunoApi\\AlunoApi\\obj\\",
+        "outputPath": "C:\\Users\\Aluno\\Documents\\React-com-ASP.NET-Core\\backend\\AlunoApi\\AlunoApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
