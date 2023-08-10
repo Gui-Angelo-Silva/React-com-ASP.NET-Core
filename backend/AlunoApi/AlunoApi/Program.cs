@@ -27,7 +27,7 @@ builder.Services.AddScoped<IAlunoService, AlunosService>();
 builder.Services.AddCors(o => o.AddPolicy("MyPolicy",
                     builder =>
                     {
-                        builder.AllowAnyOrigin()
+                        builder.WithOrigins("http://localhost:5173", "http://localhost:7290", "http://localhost:3000")
                         .AllowAnyMethod()
                         .AllowAnyHeader()
                         .AllowCredentials();
@@ -46,8 +46,10 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
+app.UseCors("MyPolicy");
+
 app.MapControllers();
 
-app.Run();
-
 app.UseRouting();
+
+app.Run();
