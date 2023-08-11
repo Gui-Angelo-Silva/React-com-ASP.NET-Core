@@ -32,7 +32,7 @@ function App() {
       <h3>Cadastro de Alunos</h3>
       <header className="App-header">
         {/* <img src={logoCadastro} alt='Cadastro' /> */}
-        <Button className='btn btn-sucess'>Adicionar</Button>
+        <Button className='btn btn-success'>Adicionar</Button>
       </header>
       <Table className='table table-bordered'>
         <thead>
@@ -50,7 +50,7 @@ function App() {
               <td>{aluno.email}</td>
               <td>{aluno.idade}</td>
               <td>
-                <Button className='btn btn-primary'>Editar</Button> {"  "}
+                <Button className='btn btn-info'>Editar</Button> {"  "}
                 <Button className='btn btn-danger'>Excluir</Button>
               </td>
             </tr>

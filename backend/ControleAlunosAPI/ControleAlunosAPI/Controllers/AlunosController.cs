@@ -1,8 +1,8 @@
-﻿using AlunoApi.Models;
-using AlunoApi.Services;
+﻿using ControleAlunosAPI.Models;
+using ControleAlunosAPI.Services;
 using Microsoft.AspNetCore.Mvc;
 
-namespace AlunoApi.Controllers
+namespace ControleAlunosAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -40,10 +40,10 @@ namespace AlunoApi.Controllers
             try
             {
                 var alunos = await _alunoService.GetAlunosByNome(nome);
-                
+
                 if (alunos == null)
                     return NotFound($"Não existem alunos com o critério {nome}");
-                
+
                 return Ok(alunos);
             }
             catch
@@ -53,7 +53,7 @@ namespace AlunoApi.Controllers
             }
         }
 
-        [HttpGet("{id:int}", Name ="GetAluno")]
+        [HttpGet("{id:int}", Name = "GetAluno")]
         public async Task<ActionResult<Aluno>> GetAluno(int id)
         {
             try
@@ -112,7 +112,7 @@ namespace AlunoApi.Controllers
             try
             {
                 var aluno = await _alunoService.GetAluno(id);
-                if(aluno != null)
+                if (aluno != null)
                 {
                     await _alunoService.DeleteAluno(aluno);
                     return Ok($"Aluno de id={id} foi excluído com sucesso");
