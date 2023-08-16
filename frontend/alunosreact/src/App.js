@@ -8,7 +8,8 @@ import { Modal, ModalBody, ModalFooter, ModalHeader, Button, Table } from 'react
 
 function App() {
 
-  const baseUrl = 'https://localhost:7290/api/Alunos';
+  //const baseUrl = 'https://localhost:7290/api/Alunos';
+  const baseUrl = 'https://localhost:7225/api/Alunos';
   
   const [data, setData] = useState([]);
 
@@ -88,7 +89,7 @@ function App() {
           aluno.idade=resposta.idade
         }
       })
-      abrirFecharModalEditar()
+      abrirFecharModalEditar();
     }).catch(error=>{
       console.log(error)
     })

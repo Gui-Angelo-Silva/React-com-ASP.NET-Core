@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Aluno\\source\\repos\\ControleAlunosAPI\\ControleAlunosAPI\\ControleAlunosAPI.csproj": {}
+    "C:\\Users\\Aluno\\Documents\\React-com-ASP.NET-Core\\backend\\ControleAlunosAPI\\ControleAlunosAPI\\ControleAlunosAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Aluno\\source\\repos\\ControleAlunosAPI\\ControleAlunosAPI\\ControleAlunosAPI.csproj": {
+    "C:\\Users\\Aluno\\Documents\\React-com-ASP.NET-Core\\backend\\ControleAlunosAPI\\ControleAlunosAPI\\ControleAlunosAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Aluno\\source\\repos\\ControleAlunosAPI\\ControleAlunosAPI\\ControleAlunosAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Aluno\\Documents\\React-com-ASP.NET-Core\\backend\\ControleAlunosAPI\\ControleAlunosAPI\\ControleAlunosAPI.csproj",
         "projectName": "ControleAlunosAPI",
-        "projectPath": "C:\\Users\\Aluno\\source\\repos\\ControleAlunosAPI\\ControleAlunosAPI\\ControleAlunosAPI.csproj",
+        "projectPath": "C:\\Users\\Aluno\\Documents\\React-com-ASP.NET-Core\\backend\\ControleAlunosAPI\\ControleAlunosAPI\\ControleAlunosAPI.csproj",
         "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Aluno\\source\\repos\\ControleAlunosAPI\\ControleAlunosAPI\\obj\\",
+        "outputPath": "C:\\Users\\Aluno\\Documents\\React-com-ASP.NET-Core\\backend\\ControleAlunosAPI\\ControleAlunosAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -50,6 +50,10 @@
               "version": "[2.2.0, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.10, )"
             },
