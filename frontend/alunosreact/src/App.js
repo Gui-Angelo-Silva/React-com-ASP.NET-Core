@@ -16,6 +16,10 @@ function App() {
 
   const [modalEditar, setModalEditar] = useState(false);
 
+  const [modalExcluir, setModalExcluir] = useState(false);
+
+  const [updateData, setUpdateData] = useState(true);
+
   const [alunoSelecionado, setAlunoSelecionado] = useState({
     id: '',
     nome: '',
@@ -25,8 +29,8 @@ function App() {
 
   const selecionarAluno=(aluno, opcao)=>{
     setAlunoSelecionado(aluno);
-      (opcao==="Editar") &&
-        abrirFecharModalEditar();
+      (opcao==="Editar") ?
+        abrirFecharModalEditar() : abrirFecharModalExcluir();
   }
 
   const abrirFecharModalIncluir=()=>{
@@ -35,6 +39,10 @@ function App() {
 
   const abrirFecharModalEditar=()=>{
     setModalEditar(!modalEditar)
+  }
+
+  const abrirFecharModalExcluir=()=>{
+    setModalExcluir(!modalExcluir)
   }
 
   const handleChange = e=> {
@@ -86,9 +94,22 @@ function App() {
     })
   }
 
+  const pedidoDelete=async()=>{
+    await axios.delete(baseUrl+"/"+alunoSelecionado.id)
+    .then(response=>{
+      setData(data.filter(aluno=>aluno.id !== response.data));
+        abrirFecharModalExcluir();
+    }).catch(error=>{
+      console.log(error);
+    })
+  }
+
   useEffect(() => {
-    pedidoGet();
-  })
+    if(updateData){
+      pedidoGet();
+      setUpdateData(false);
+    }
+  }, [updateData])
 
   return (
     <div className="App">
@@ -163,13 +184,22 @@ function App() {
                 <label>Idade: </label>
                 <br />
                 <input type='text' className='form-control' name="idade" onChange={handleChange}
-                  value={alunoSelecionado && alunoSelecionado.nome}/>
+                  value={alunoSelecionado && alunoSelecionado.idade}/>
                 <br />
           </div>
         </ModalBody>
         <ModalFooter>
           <button className='btn btn-primary' onClick={()=>pedidoPut()}>Incluir</button>
           <button className='btn btn-danger' onClick={()=>abrirFecharModalEditar()}>Cancelar</button>
+        </ModalFooter>
+      </Modal>
+      <Modal isOpen={modalExcluir}>
+        <ModalBody>
+          Confirma a exclusão deste(a) aluno(a) : {alunoSelecionado && alunoSelecionado.nome} ?
+        </ModalBody>
+        <ModalFooter>
+          <button className='btn btn-primary' onClick={()=>pedidoDelete()}>Sim</button>
+          <button className='btn btn-danger' onClick={()=>abrirFecharModalExcluir()}>Não</button>
         </ModalFooter>
       </Modal>
     </div>
