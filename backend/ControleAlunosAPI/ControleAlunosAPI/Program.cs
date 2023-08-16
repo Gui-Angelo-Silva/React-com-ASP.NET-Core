@@ -30,6 +30,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddScoped<IAlunoService, AlunosService>();
 
+builder.Services.AddScoped<IAuthenticate, AuthenticateService>();
+
 builder.Services.AddCors(o => o.AddPolicy("MyPolicy",
                     builder =>
                     {
