@@ -1,4 +1,5 @@
 ﻿using ControleAlunosAPI.Models;
+using ControleAlunosAPI.ViewsModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -13,9 +14,19 @@ namespace ControleAlunosAPI.Context
         }
     
         public DbSet<Aluno> Alunos { get; set; }
+        public DbSet<LoginModel> LoginModels { get; set; }
+        public DbSet<RegisterModel> RegisterModels { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Aluno>().HasKey(a => a.Id);
+
+            modelBuilder.Entity<LoginModel>().HasNoKey();
+
+            modelBuilder.Entity<RegisterModel>().HasNoKey();
+
             modelBuilder.Entity<Aluno>().HasData(
                 new Aluno
                 {

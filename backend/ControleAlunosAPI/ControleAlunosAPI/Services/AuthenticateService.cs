@@ -7,6 +7,7 @@ namespace ControleAlunosAPI.Services
         private readonly SignInManager<IdentityUser> _signInManager;
         
         private readonly UserManager<IdentityUser> _userManager;
+
         public AuthenticateService(SignInManager<IdentityUser> signInManager, UserManager<IdentityUser> userManager)
         {
             _signInManager = signInManager;

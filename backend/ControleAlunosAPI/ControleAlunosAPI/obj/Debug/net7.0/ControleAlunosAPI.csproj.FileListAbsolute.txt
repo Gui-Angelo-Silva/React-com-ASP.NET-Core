@@ -152,3 +152,9 @@ C:\Users\Aluno\Documents\React-com-ASP.NET-Core\backend\ControleAlunosAPI\Contro
 C:\Users\Aluno\Documents\React-com-ASP.NET-Core\backend\ControleAlunosAPI\ControleAlunosAPI\obj\Debug\net7.0\ControleAlunosAPI.pdb
 C:\Users\Aluno\Documents\React-com-ASP.NET-Core\backend\ControleAlunosAPI\ControleAlunosAPI\obj\Debug\net7.0\ControleAlunosAPI.genruntimeconfig.cache
 C:\Users\Aluno\Documents\React-com-ASP.NET-Core\backend\ControleAlunosAPI\ControleAlunosAPI\obj\Debug\net7.0\ref\ControleAlunosAPI.dll
+C:\Users\Aluno\Documents\React-com-ASP.NET-Core\backend\ControleAlunosAPI\ControleAlunosAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Aluno\Documents\React-com-ASP.NET-Core\backend\ControleAlunosAPI\ControleAlunosAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Aluno\Documents\React-com-ASP.NET-Core\backend\ControleAlunosAPI\ControleAlunosAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Aluno\Documents\React-com-ASP.NET-Core\backend\ControleAlunosAPI\ControleAlunosAPI\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Aluno\Documents\React-com-ASP.NET-Core\backend\ControleAlunosAPI\ControleAlunosAPI\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\Aluno\Documents\React-com-ASP.NET-Core\backend\ControleAlunosAPI\ControleAlunosAPI\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
