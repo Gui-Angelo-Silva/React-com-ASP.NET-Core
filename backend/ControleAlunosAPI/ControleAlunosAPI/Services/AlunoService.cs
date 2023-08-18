@@ -10,9 +10,7 @@ namespace ControleAlunosAPI.Services
         private readonly AppDbContext _context;
 
         public AlunosService(AppDbContext context)
-        {
-            _context = context;
-        }
+            => _context = context;
 
         public async Task<IEnumerable<Aluno>> GetAlunos()
         {
@@ -26,16 +24,13 @@ namespace ControleAlunosAPI.Services
             }
         }
 
-        public async Task<Aluno> GetAluno(int id)
-        {
-            var aluno = await _context.Alunos.FindAsync(id);
-            return aluno;
-        }
+        public async Task<Aluno> GetAluno(int id) 
+            => await _context.Alunos.FindAsync(id);
 
         public async Task<IEnumerable<Aluno>> GetAlunosByNome(string nome)
         {
             IEnumerable<Aluno> alunos;
-            if (string.IsNullOrWhiteSpace(nome))
+            if (!string.IsNullOrWhiteSpace(nome))
             {
                 alunos = await _context.Alunos.Where(n => n.Nome.Contains(nome)).ToListAsync();
             }

@@ -1,12 +1,14 @@
 ﻿using ControleAlunosAPI.Models;
 using ControleAlunosAPI.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ControleAlunosAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    //[Produces("application/json")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class AlunosController : ControllerBase
     {
         private IAlunoService _alunoService;
