@@ -1,9 +1,12 @@
 import React from "react";
-import Login from "./pages/Login";
+import { BrowserRouter as Router } from 'react-router-dom';
+import AppRoutes from "./routes";
 import './Global.css';
 
 export default function App() {
   return (
-    <Login></Login>
+    <Router>
+      <AppRoutes />
+    </Router>
   );
 }
