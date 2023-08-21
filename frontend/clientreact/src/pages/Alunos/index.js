@@ -1,19 +1,53 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import './styles.css';
 import { Link } from 'react-router-dom';
 import { FiEdit, FiUserX, FiXCircle } from 'react-icons/fi';
+import api from "../../services/api";
+import { useNavigate } from 'react-router-dom'
 
 import LogoCadastro from '../../assets/logoCadastro.png';
 
 export default function Alunos() {
+
+    const [nome, setNome] = useState('');
+    const [alunos, setAlunos] = useState([]);
+
+    const email = localStorage.getItem('email');
+    const token = localStorage.getItem('token');
+
+    const history = useNavigate();
+
+    const authorization = {
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
+    }
+
+    useEffect(() => {
+        api.get('api/alunos', authorization).then(
+            response => {setAlunos(response.data);
+        }, token)
+    })
+
+    async function logout(){
+        try {
+            localStorage.clear();
+            localStorage.setItem('token', '');
+            authorization.headers = '';
+            history('/');
+        } catch (error) {
+            alert("Não foi possíel fazer o logout" + error);
+        }
+    }
+
     return (
         <div className="aluno-container">
             <header>
-                <img src={ LogoCadastro } alt="Logo do Cadastro de Alunos"/>
-                <span>Bem-Vindo, <strong>Guilherme</strong>!</span>
+                <img src={LogoCadastro} alt="Logo do Cadastro de Alunos" />
+                <span>Bem-Vindo, <strong>{email}</strong>!</span>
                 <Link className="button" to="aluno/novo/0">Novo Aluno</Link>
-                <button type="button">
-                    <FiXCircle size={35} color="#17202a"/>
+                <button onClick={logout} type="button">
+                    <FiXCircle size={35} color="#17202a" />
                 </button>
             </header>
             <form>
@@ -24,10 +58,12 @@ export default function Alunos() {
             </form>
             <h1>Relação de Alunos</h1>
             <ul>
-                <li>
-                    <b>Nome: </b>Paulo<br /><br />
-                    <b>Email: </b>paulo@email.com<br /><br />
-                    <b>Idade: </b>22<br /><br />
+                {alunos.map(aluno=>(
+                    <li key={aluno.id}>
+                    <b>Nome: </b>{aluno.nome}<br /><br />
+                    <b>Email: </b>{aluno.email}<br /><br />
+                    <b>Idade: </b>{aluno.idade}<br /><br />
+                    
                     <button type="button">
                         <FiEdit size="25" color="#17202a" />
                     </button>
@@ -35,6 +71,7 @@ export default function Alunos() {
                         <FiUserX size="25" color="#17202a" />
                     </button>
                 </li>
+                ))}
             </ul>
         </div>
     );

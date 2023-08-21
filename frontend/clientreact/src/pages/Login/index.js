@@ -26,7 +26,7 @@ export default function Login(){
             localStorage.setItem('token', response.data.token);
             localStorage.setItem('expiration', response.data.expiration);
 
-            history.push('/alunos');
+            history('/alunos');
         }
         catch (error) {
             console.error('Login falhou: ' + error);
