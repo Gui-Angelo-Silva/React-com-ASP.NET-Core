@@ -3,7 +3,7 @@ import './styles.css';
 import { Link } from 'react-router-dom';
 import { FiEdit, FiUserX, FiXCircle } from 'react-icons/fi';
 import api from "../../services/api";
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 
 import LogoCadastro from '../../assets/logoCadastro.png';
 
